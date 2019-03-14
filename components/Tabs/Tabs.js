@@ -15,6 +15,7 @@ class TabLink {
     
     // Add a click event listener on this instance, calling the select method on click
 
+    this.tabItem.addEventListener('click', () => {this.select()});
   };
 
   select() {
@@ -59,4 +60,4 @@ class TabItem {
 
 */
 
-links = document.querySelectorAll();
+links = document.querySelectorAll('.tabs-link').forEach(link => new TabLink(link));
